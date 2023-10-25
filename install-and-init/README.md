@@ -20,7 +20,7 @@ terraform init
 
 ```terraform
 # main.tf
-resource "random_pet" "my-server-name" {}
+resource "random_pet" "my_server_name" {}
 ```
 _[-> main.tf](main.tf)_
 
