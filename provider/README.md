@@ -2,7 +2,7 @@
 
 ## azurerm Provider
 
-```shell
+```terraform
 # providers.tf
 terraform {
   required_providers {
@@ -17,7 +17,7 @@ provider "azurerm" {
   features {}
 }
 ```
-_[-> providers.tf](providers.tf)_
+_[-> providers.tf](providers-1.tf)_
 
 ```shell
 terraform init
@@ -25,7 +25,7 @@ terraform init
 
 ## random Provider ergänzen
 
-```
+```terraform
 # providers.tf
 terraform {
   required_providers {
@@ -37,7 +37,7 @@ terraform {
   }
 }
 ```
-_[-> providers.tf](providers.tf)_
+_[-> providers.tf](providers-2.tf)_
 
 ```shell
 terraform init
@@ -49,7 +49,7 @@ terraform init -upgrade
 ```
 
 ## azurerm Provider nutzen
-```
+```terraform
 # main.tf
 data "azurerm_client_config" "myself" {}
 

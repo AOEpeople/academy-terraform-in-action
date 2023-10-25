@@ -1,4 +1,4 @@
-# Installation  und lokales Setup
+# Installation und lokales Setup
 
 ## Installation
 
@@ -6,7 +6,7 @@
 
 ## Initialisierung
 
-### Vorbereitung
+### Vorbereitung deines ersten Projektes
 ```shell
 mkdir my-terraform-project && cd my-terraform-project
 ```
@@ -18,7 +18,7 @@ terraform init
 
 ### Terraform initialized in an empty directory?
 
-```shell
+```terraform
 # main.tf
 resource "random_pet" "my-server-name" {}
 ```
