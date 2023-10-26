@@ -65,7 +65,6 @@ terraform {
   }
 }
 ```
-_[-> state.tf](state.tf)_
 
 ### state nutzen
 ```shell
@@ -94,6 +93,3 @@ output "public_ip" {
 ```shell
 terraform output
 ```
-
-### Übungsaufgabe
-...
