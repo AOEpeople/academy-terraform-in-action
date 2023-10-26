@@ -25,6 +25,10 @@ terraform init
 
 ## random Provider ergänzen
 
+```shell
+terraform providers
+```
+
 ```terraform
 # providers.tf
 terraform {
