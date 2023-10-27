@@ -25,11 +25,30 @@ resource "azurerm_virtual_network" "my_vnet" {
 terraform apply
 ```
 
-## pass variables
+## Variablen übergeben
 
 ```shell
 terraform apply -var="address_space=10.0.0.0/16"
 ```
+
+## locals
+
+```terraform
+# main.tf
+locals {
+  name_prefix = "aoe-"
+  rg_name     = "${var.username}-rg"
+}
+
+resource "azurerm_virtual_network" "my_vnet" {
+  name                = "${local.name_prefix}my-vnet"
+  location            = "germanywestcentral"
+  resource_group_name = local.rg_name
+  
+  [...]
+}
+```
+
 
 ## terraform.tfvars
 
@@ -107,12 +126,21 @@ resource "azurerm_virtual_network" "my_vnet" {
 ## eine Variable KST vom Typ Number anlegen und als Tag verwenden
 
 ```terraform
-  # main.tf
+# variables.tf
+variable "kst" {
+  type = number
+}
+
+# main.tf
+{
+  [...]
   tags = {
     KST = var.kst
   }
+}
 ```
-mal mit einem String testen
+
+mit einem String testen
 
 ## var.address_space als Liste definieren
 
@@ -132,6 +160,23 @@ variable "address_space" {
   default = ["10.0.0.0/16"]
 }
 ```
+
+## Sensitive Variablen
+
+```terraform
+# variables.tf
+variable "my_password" {
+  type    = string
+  sensitive = true
+}
+
+# output.tf
+output "my_password" {
+  value     = var.my_password
+  # sensitive = true
+}
+```
+
 
 ## TF_VAR_environment nutzen
 
