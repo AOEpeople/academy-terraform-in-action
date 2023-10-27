@@ -18,3 +18,7 @@ terraform destroy
   - Tipps: 
     - Public IP verwenden aber Zugriff auf die eigene IP beschränken
     - [tls_private_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key)
+
+- eine 2. und 3. identische VM anlegen
+  - [count](https://www.terraform.io/docs/language/meta-arguments/count.html)
+  - [format](https://www.terraform.io/docs/language/functions/format.html) 
