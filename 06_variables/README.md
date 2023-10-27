@@ -123,13 +123,13 @@ variable "address_space" {
 }
 ```
 
-## variable für DNS Server anlegen und default setzen
+## variablen defaults setzen
 
 ```terraform
 # variables.tf
-variable "dns_servers" {
+variable "address_space" {
   type    = list(string)
-  default = ["10.0.0.4", "10.0.0.5"]
+  default = ["10.0.0.0/16"]
 }
 ```
 
