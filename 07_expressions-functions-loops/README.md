@@ -37,10 +37,10 @@ resource "azurerm_virtual_network" "my_vnet" {
   // ...
 
   dynamic "subnet" {
-    count = var.number_of_subnets
+    for_each = range(1, var.number_of_subnets + 1)
     content {
-      name           = "subnet${count.index}"
-      address_prefix = cidrsubnet(var.address_space, 8, count.index)
+      name           = "subnet${subnet.value}"
+      address_prefix = cidrsubnet(var.address_space, 8, subnet.value)
     }
   }
 
