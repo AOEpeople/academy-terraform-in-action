@@ -8,4 +8,5 @@
 5. [Terraform State](05_state/README.md)
 6. [Terraform Variablen](06_variables/README.md)
 7. [Ausdrücke, Funktionen und Schleifen](07_expressions-functions-loops/README.md)
-8. [Stacks](08_stacks/README.md)
+8. [Lab](08_lab/README.md)
+9. [Stacks](09_stacks/README.md)
