@@ -17,7 +17,6 @@ provider "azurerm" {
   features {}
 }
 ```
-_[-> providers.tf](providers-1.tf)_
 
 ```shell
 terraform init
@@ -33,7 +32,7 @@ terraform providers
 # providers.tf
 terraform {
   required_providers {
-    ...
+    // ...
     random = {
       source = "hashicorp/random"
       version = "3.5.0"
@@ -41,7 +40,6 @@ terraform {
   }
 }
 ```
-_[-> providers.tf](providers-2.tf)_
 
 ```shell
 terraform init
@@ -61,7 +59,6 @@ output "myself_object_id" {
   value = data.azurerm_client_config.myself.object_id
 }
 ```
-_[-> main.tf](main.tf)_
 
 ```shell
 terraform apply

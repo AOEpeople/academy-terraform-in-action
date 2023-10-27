@@ -1,1 +1,0 @@
-resource "random_pet" "my_server_name" {}

@@ -22,7 +22,6 @@ terraform init
 # main.tf
 resource "random_pet" "my_server_name" {}
 ```
-_[-> main.tf](main.tf)_
 
 ```shell
 terraform init

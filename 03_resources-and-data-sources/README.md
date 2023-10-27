@@ -26,7 +26,6 @@ resource "azurerm_virtual_network" "my_vnet" {
   }
 }
 ```
-_[-> main.tf](main-1.tf)_
 
 ```shell
 terraform apply
@@ -62,7 +61,6 @@ resource "azurerm_virtual_network" "my_vnet" {
   }
 }
 ```
-_[-> main.tf](main-2.tf)_
 
 ```shell
 terraform apply
