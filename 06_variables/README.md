@@ -86,7 +86,6 @@ environment = "dev"
 ```shell
 terraform apply
 ```
-testweise environment als Zahl angeben
 
 ## environment Variable in Ressourcen Namen verwenden
 
@@ -104,3 +103,45 @@ resource "azurerm_virtual_network" "my_vnet" {
   }
 }
 ```
+
+## eine Variable KST vom Typ Number anlegen und als Tag verwenden
+
+```terraform
+  # main.tf
+  tags = {
+    KST = var.kst
+  }
+```
+mal mit einem String testen
+
+## var.address_space als Liste definieren
+
+```terraform
+# variables.tf
+variable "address_space" {
+  type = list(string)
+}
+```
+
+## variable für DNS Server anlegen und default setzen
+
+```terraform
+# variables.tf
+variable "dns_servers" {
+  type    = list(string)
+  default = ["10.0.0.4", "10.0.0.5"]
+}
+```
+
+## TF_VAR_environment nutzen
+
+Linux:
+
+```shell
+export TF_VAR_environment="staging"
+```
+Powershell:
+```shell
+$env:TF_VAR_environment="staging"
+```
+
