@@ -24,7 +24,7 @@ module "my_vm" {
 ```
 
 ```shell
-/modules/vm/
+./modules/vm/
   main.tf
   variables.tf
   outputs.tf
@@ -33,7 +33,7 @@ module "my_vm" {
 ## Modul für VNETs inkl. Subnet anlegen und Ressourcen verschieben
 
 ```shell
-/modules/vnet/
+./modules/vnet/
   main.tf
   variables.tf
   outputs.tf
