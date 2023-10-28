@@ -11,3 +11,5 @@
 8. [Lab](08_lab/README.md)
 9. [Module](09_modules/README.md)
 10. [Stacks](10_stacks/README.md)
+11. [Environments](11_environments/README.md)
+12. [Terragrunt](12_terragrunt/README.md)
